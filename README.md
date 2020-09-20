@@ -66,3 +66,5 @@ Login Page -
 Company Page - 
 1) Verify company Page label
 2) Validate company added for set of testdata given from test data sheet
+
+Note- Execution Evidences are placed under Execution Evidences-20Sept folder. Kindly check if needed.
