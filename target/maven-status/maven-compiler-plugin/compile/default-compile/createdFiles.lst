@@ -1,0 +1,10 @@
+com\assignment\qa\pages\LoginPage.class
+com\assignment\qa\pages\CompaniesPage.class
+com\assignment\qa\util\TestUtil.class
+com\assignment\qa\pages\ContactsPage.class
+com\assignment\qa\base\TestBase.class
+com\assignment\qa\pages\HomePage.class
+com\assignment\qa\util\WebEventListener.class
+com\assignment\qa\pages\DealsPage.class
+com\assignment\qa\pages\TasksPage.class
+com\qa\ExtentReportListener\ExtentReporterNG.class
