@@ -30,16 +30,16 @@ How to Execute -
 -> Run below command ( prerequisite - java 1.8 and maven is installed)
 
 
-To run CompanyPage tests use below command 9remove quotes before use) --------
+To run CompanyPage tests use below command (remove quotes before use) ----------------------
 'mvn clean test -Dsurefire.suiteXmlFiles=src/main/resources/CompanyPageTest.xml'
 
-or To run HomePage tests use below command --------------------------
+or To run HomePage tests use below command ---------------------------------------------
 'mvn clean test -Dsurefire.suiteXmlFiles=src/main/resources/HomePageTest.xml'
 
-or To run LoginPage tests use below command --------------------------
+or To run LoginPage tests use below command -------------------------------------------
 'mvn clean test -Dsurefire.suiteXmlFiles=src/main/resources/LoginPageTest.xml'
 
-or To run ContactPage tests use below command  ---------------------------
+or To run ContactPage tests use below command  -----------------------------------------
 'mvn clean test -Dsurefire.suiteXmlFiles=src/main/resources/ContactPageTest.xml'
 
 
