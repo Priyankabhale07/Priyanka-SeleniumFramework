@@ -23,7 +23,7 @@ Reporting
 Testng reporting is used in this framework and with this basic extent report is also used.
 
 How to Execute - 
--> First Need to clone project from github with below command
+-> First Need to clone project from github - https://github.com/Priyankabhale07/Priyanka-SeleniumFramework
 
 -> After cloning repository, open command prompt and navigate to workspace location where repository is placed
 
