@@ -28,13 +28,20 @@ How to Execute -
 -> After cloning repository, open command prompt and navigate to workspace location where repository is placed
 
 -> Run below command ( prerequisite - java 1.8 and maven is installed)
-mvn clean test -Dsurefire.suiteXmlFiles=src/main/resources/HomePageTest.xml
-or
-mvn clean test -Dsurefire.suiteXmlFiles=src/main/resources/CompanyPageTest.xml
-or
-mvn clean test -Dsurefire.suiteXmlFiles=src/main/resources/LoginPageTest.xml
-or
-mvn clean test -Dsurefire.suiteXmlFiles=src/main/resources/ContactPageTest.xml
+
+
+To run CompanyPage tests use below command 9remove quotes before use) --------
+'mvn clean test -Dsurefire.suiteXmlFiles=src/main/resources/CompanyPageTest.xml'
+
+or To run HomePage tests use below command --------------------------
+'mvn clean test -Dsurefire.suiteXmlFiles=src/main/resources/HomePageTest.xml'
+
+or To run LoginPage tests use below command --------------------------
+'mvn clean test -Dsurefire.suiteXmlFiles=src/main/resources/LoginPageTest.xml'
+
+or To run ContactPage tests use below command  ---------------------------
+'mvn clean test -Dsurefire.suiteXmlFiles=src/main/resources/ContactPageTest.xml'
+
 
 Run any command w.r.t. test suite for that respective screen. We can also add all these 4 suites in one masterTestng and execute it for bulk execution.
 
