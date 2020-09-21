@@ -12,7 +12,7 @@ public class DealsPage extends TestBase{
 	WebElement dealsLabel;
 	
 	
-	// Initializing the Page Objects:
+	// Initializing Page Objects:
 		public DealsPage() {
 			PageFactory.initElements(driver, this);
 		}

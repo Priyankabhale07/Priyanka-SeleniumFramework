@@ -33,7 +33,7 @@ public class HomePage extends TestBase {
 	@FindBy(xpath = "//span[contains(text(),'Tasks')]")
 	WebElement tasksLink;
 
-	// Initializing the Page Objects:
+	// Initializing  Page Objects:
 	public HomePage() {
 		PageFactory.initElements(driver, this);
 	}
@@ -69,24 +69,16 @@ public class HomePage extends TestBase {
 	}
 
 	public void clickOnNewContactLink(){
-		//	Actions action = new Actions(driver);
-		//	action.moveToElement(contactsLink).build().perform();
 		newContactLink.click();
 
 	}
 
 	public void clickOnNewCompanyLink(){
-		//	Actions action = new Actions(driver);
-		//	action.moveToElement(contactsLink).build().perform();
+		
 		driver.navigate().refresh();
 		newCompanyLink.click();
 
 	}
-
-
-
-
-
 
 
 }

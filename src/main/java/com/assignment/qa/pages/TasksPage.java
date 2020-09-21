@@ -20,4 +20,5 @@ public class TasksPage extends TestBase{
 	public boolean verifyTaskLabel(){
 		return taskLabel.isDisplayed();
 	}
+	
 }

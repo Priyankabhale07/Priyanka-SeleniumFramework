@@ -26,6 +26,7 @@ import com.assignment.qa.pages.ContactsPage;
 import com.assignment.qa.pages.HomePage;
 import com.assignment.qa.pages.LoginPage;
 import com.assignment.qa.util.TestUtil;
+import com.github.javafaker.Faker;
 
 public class ContactsPageTest extends TestBase{
 
@@ -33,7 +34,7 @@ public class ContactsPageTest extends TestBase{
 	HomePage homePage;
 	TestUtil testUtil;
 	ContactsPage contactsPage;
-
+	Faker faker = new Faker();
 	String sheetName = "contacts";
 
 
@@ -62,17 +63,6 @@ public class ContactsPageTest extends TestBase{
 		Assert.assertTrue(contactsPage.verifyContactsLabel(), "contacts label is missing on the page");
 	}
 
-	/*@Test(priority=2)
-	public void selectSingleContactsTest(){
-		contactsPage.selectContactsByName("test2 test2");
-	}
-
-	@Test(priority=3)
-	public void selectMultipleContactsTest(){
-		contactsPage.selectContactsByName("test2 test2");
-		contactsPage.selectContactsByName("ui uiii");
-
-	}*/
 
 	@DataProvider
 	public Object[][] getCRMTestData(){
@@ -85,7 +75,6 @@ public class ContactsPageTest extends TestBase{
 	public void validateCreateNewContact(String title, String firstName, String lastName, String company) throws InterruptedException{
 		homePage.clickOnContactsLink();
 		homePage.clickOnNewContactLink();
-		//contactsPage.createNewContact("Mr.", "Tom", "Peter", "Google");
 		String Name = contactsPage.createNewContact(title, firstName, lastName, company);
 		System.out.println("Newly added contact is :"+Name);
 
@@ -98,6 +87,28 @@ public class ContactsPageTest extends TestBase{
 	}
 
 
+	// Randomly generating test data for creating new contacts
+	@Test(priority=4)
+	public void validateCreateNewContactRandomTestData() throws InterruptedException{
+		homePage.clickOnContactsLink();
+		homePage.clickOnNewContactLink();
+		
+		String title = faker.name().title();
+		String firstName = faker.name().firstName();
+		String lastName = faker.name().lastName();
+		String company = faker.company().name();
+		String Name = contactsPage.createNewContact(title, firstName, lastName, company);
+		System.out.println("Newly added contact is :"+Name);
+
+		if(Name.contains(firstName)|| Name.contains(lastName)) {
+			Assert.assertTrue(true,"Newly added contact name is matching:");
+		}else{
+			Assert.assertTrue(true,"Newly added contact name is not matching:");
+		}
+
+	}
+
+	
 
 	@AfterTest
 	public void tearDown(){

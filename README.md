@@ -2,7 +2,7 @@
 
 --> Insights
 Page object Model - Creating dedicated class file for each web page and writing down respective locators from that webpage and releated methods w.r.t. operations performed on that page
-Data driven - For some of the test cases, test data is supplied from test data file.
+Data driven - For some of the test cases, test data is randomly generated and for few test cases its supplied from test data file and used through dataprovider annotation.
 
 --> Framework 
 Current framework is hybrid framwork, Combination of Page Object Model(POM)& Test data driven framwork.
@@ -14,6 +14,10 @@ Framework is divided into 3 layers -
 -> utility layer  = This layer is useful for creating common utilities used accross framework like reading data from excel, taking screenshot etc
 -> Page object layer = This layer is for handling page objects and object repositories
 -> test cases layer = This layer is for writing test cases and calling methods for validation which are included in page object
+
+Test Date - 
+-> Randomly generated test data
+-> Test data passing from excel file
 
 Reporting
 Testng reporting is used in this framework and with this basic extent report is also used.
@@ -41,11 +45,22 @@ Benifits of passing testng.xml name as parameter -
 We can use such setup for creating Jenkins build and in maven job we can easily pass testng.xml filename as parameter from maven goals options in Build section.
 
 
---> Major libraries/dependancies used 
-maven, TestNG, maven surefire plugin, apache poi etc
+--> Major Tools/libraries/dependancies used 
+Java 1.8, Selenium 3.14, Chromedriver 85.X, maven, TestNG, maven surefire plugin, apache poi etc
 
 
 Below Test cases are added in each test class
+
+Company Page - 
+1) Verify company Page label
+2) Validate company added for set of testdata given from test data sheet
+3) Randomly generated test data is passed to test case to validate New Company add functionality
+4) Negative Test case -  Verify that company is not added if required field is blank
+
+Contact Page - 
+1) Verify Contact Page label
+2) Validate contact added for 3 sets of testdata
+3) Randomly generated test data is passed to test case to validate contact add functionality
 
 Homepage - 
 1) Verify pagetitle of homescreen
@@ -55,16 +70,8 @@ Homepage -
 5) Verify Deals tab on homescreen
 6) Verify Task tab on homescreen
 
-Contact Page - 
-1) Verify Contact Page label
-2) Validate contact added for 3 sets of testdata
-
 Login Page - 
 1) Verify Page title 
 2)Verify Login is succesful or not
-
-Company Page - 
-1) Verify company Page label
-2) Validate company added for set of testdata given from test data sheet
 
 Note- Execution Evidences are placed under Execution Evidences-20Sept folder. Kindly check if needed.
